@@ -22,7 +22,6 @@
 
     .menu {
       @media (max-width: $sm), (max-width: $md) {
-        
         position: absolute;
         list-style: none;
         gap: 2rem;
@@ -40,7 +39,7 @@
         padding: 3rem;
         justify-content: flex-end;
         background: white;
-        box-shadow: o 4px 4px rgba(0,0,0,0.05);
+        box-shadow: o 4px 4px rgba(0, 0, 0, 0.05);
       }
 
       text-transform: uppercase;
@@ -71,6 +70,13 @@
           border-radius: 999px;
           box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
         }
+      }
+    }
+    .menuIcon {
+      display: none;
+
+      @media (max-width: $md) {
+        display: inline-block;
       }
     }
   }

@@ -6,9 +6,9 @@ import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 
 const Header = () => {
-  
-  const[menuOpened, setMenuOpened] = useState(false);
-  const headerShadows = useHeaderShadow()
+  const [menuOpened, setMenuOpened] = useState(false);
+  const headerShadows = useHeaderShadow();
+
   return (
     <motion.div
       initial="hidden"
@@ -16,14 +16,15 @@ const Header = () => {
       variants={headerVariants}
       viewport={{ once: false, amount: 0.25 }}
       className={`paddings ${css.wrapper}`}
-      style={{boxShadow: headerShadows}}
+      style={{ boxShadow: headerShadows }}
     >
       <div className={`flexCenter innerWidth ${css.container}`}>
         <div className={css.name}>Shevabey</div>
 
         <ul
-         style={getMenuStyles(menuOpened)}
-         className={`flexCenter ${css.menu}`}>
+          style={getMenuStyles(menuOpened)}
+          className={`flexCenter ${css.menu}`}
+        >
           <li>
             <a href="">About</a>
           </li>
@@ -39,11 +40,13 @@ const Header = () => {
           </li>
         </ul>
         {/* For medium and small screen */}
-        <div className={css.menuIcon}
-        onClick={() => setMenuOpened((prev)=>!prev)}
-        >
-          <BiMenuAltRight size={30}/>
-        </div>
+          <div
+            className={css.menuIcon}
+            onClick={() => setMenuOpened((prev) => !prev)}
+          >
+            <BiMenuAltRight size={30} />
+          </div>
+        
       </div>
     </motion.div>
   );

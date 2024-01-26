@@ -26,7 +26,7 @@ const Header = () => {
           className={`flexCenter ${css.menu}`}
         >
           <li>
-            <a href="">About</a>
+            <a href="">Home</a>
           </li>
           <li>
             <a href="">Service</a>
@@ -38,6 +38,12 @@ const Header = () => {
             <p>081389608249</p>
             <BiPhoneCall size={"40px"} />
           </li>
+          <div>
+              <a 
+              href="#"
+              className={css.button}
+              >My CV</a>
+          </div>
         </ul>
         {/* For medium and small screen */}
           <div
@@ -46,6 +52,7 @@ const Header = () => {
           >
             <BiMenuAltRight size={30} />
           </div>
+
         
       </div>
     </motion.div>

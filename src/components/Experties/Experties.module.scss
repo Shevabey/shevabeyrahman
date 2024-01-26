@@ -1,0 +1,30 @@
+@import "../../styles/contants.scss";
+
+.wrapper{
+    background: white;
+
+    .container{
+        align-items: flex-start;
+        gap: 2rem;
+        flex-wrap: wrap;
+        >div {
+            flex: 1;
+        }
+
+        .leftSide{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .exp{
+                display: flex;
+                align-items: center;
+                border: 1px solid $secondary-white;
+                border-radius: 20px;
+                padding: 1.5rem;
+                gap: 2rem;
+                transition: all 200ms ease-out;
+            }
+        }
+    }
+}

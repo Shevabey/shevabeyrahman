@@ -39,9 +39,11 @@ const Hero = () => {
         </motion.div>
 
         {/* email */}
-        <a href="mailto:shevabeyrahman@gmail.com" className={css.email}>
+        <motion.a 
+        variants={fadeIn("right", "tween", 0.2, 1)}
+        href="mailto:shevabeyrahman@gmail.com" className={css.email}>
           shevabeyrahman@gmail.com
-        </a>
+        </motion.a>
 
 
         {/* Lower Elements */}

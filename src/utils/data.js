@@ -1,23 +1,29 @@
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { CiMobile1 } from "react-icons/ci";
-import { MdWorkspacesOutline } from "react-icons/md";
+import { BsReverseLayoutTextWindowReverse } from "react-icons/bs";
+
 export const projectExperience = [
   {
     name: "Website Design",
-    projects: 76,
+    stack: [
+      "./logo/logohtml.png",
+      "./logo/logocss.png",
+      "./logo/logojs.png",
+      "./logo/logoreact.png",
+    ],
     icon: HiOutlineDesktopComputer,
     bg: "#286F6C",
   },
   {
     name: "Mobile App Design",
-    projects: 63,
+    stack: ["./logo/logokotlin.png"],
     icon: CiMobile1,
     bg: "#EEC048",
   },
   {
-    name: "Brand Identity",
-    projects: 47,
-    icon: MdWorkspacesOutline,
+    name: "UI/UX Design",
+    stack: ["./logo/logofigma.png"],
+    icon: BsReverseLayoutTextWindowReverse,
     bg: "#F26440",
   },
 ];

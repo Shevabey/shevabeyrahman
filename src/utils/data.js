@@ -29,8 +29,9 @@ export const projectExperience = [
 ];
 
 export const WhatDoIHelp = [
-  "I will help you with finging a solution and solve your problem, We use process design to create digital products. Besides that also help their business.",
-  "We use process design to create digital products. Besides that also help their business",
+  "I will help you find solutions and implement process designs to create superior user experiences for digital products.",
+
+  "Developing responsive and engaging user interfaces, ensuring that your digital products are not only functional but also have an attractive aesthetic ensures business success through innovative technology solutions.",
 ];
 
 export const workExp = [

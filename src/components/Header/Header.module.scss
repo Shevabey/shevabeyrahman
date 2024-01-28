@@ -80,8 +80,8 @@
       }
     }
     .button {
-      width: 115px;
-      height: 45px;
+      width: 6.7rem;
+      height: 2.5rem;
       border-radius: 5px;
       text-decoration: none;
       display: block;
@@ -91,11 +91,11 @@
       justify-content: center;
       position: relative;
       padding: 10px 24px;
-      font-size: 18px;
+      font-size: 15px;
       border: 2px solid rgb(98, 193, 177);
       border-radius: 34px;
       background: transparent;
-      font-weight: 200;
+      font-weight: 100;
       transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
       overflow: hidden;
       flex-wrap: wrap;
@@ -124,8 +124,8 @@
         &::before {
           scale: 3;
         }
-        font-weight: bold;
-        color: #212121;
+        font-weight: 200;
+        color: #582407;
         scale: 1.1;
         box-shadow: 0 0px 20px rgba(98, 184, 193, 0.4);
       }

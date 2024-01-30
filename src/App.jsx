@@ -4,6 +4,7 @@ import css from "./styles/app.module.scss"
 import Hero from "./components/Hero/Hero"
 import Experties from "./components/Experties/Experties"
 import Portfolio from "./components/Portfolio/Portfolio"
+import Footer from "./components/Footer/Footer"
 
 const App = () => {
 
@@ -13,6 +14,7 @@ const App = () => {
       <Hero/>
       <Experties/>
       <Portfolio/>
+      <Footer/>
     </div>
   )
 }

@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import css from "./Header.module.scss";
 import { BiMenuAltRight, BiPhoneCall } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
-
+import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerShadows = useHeaderShadow();
+  const menuRef = useRef();
 
+  useOutsideAlerter(
+    {
+      menuRef,
+      setMenuOpened
+    }
+  )
   return (
     <motion.div
       initial="hidden"
@@ -22,17 +29,18 @@ const Header = () => {
         <div className={css.name}>Shevabey</div>
 
         <ul
+        ref={menuRef}
           style={getMenuStyles(menuOpened)}
           className={`flexCenter ${css.menu}`}
         >
           <li>
-            <a href="">Home</a>
+            <a href="#" className={css.active}>Home</a>
           </li>
           <li>
-            <a href="">Service</a>
+            <a href="#experties">Service</a>
           </li>
           <li>
-            <a href="">Portfolio</a>
+            <a href="#portfolio">Portfolio</a>
           </li>
           <li className={`flexCenter ${css.phone}`}>
             <p>081389608249</p>

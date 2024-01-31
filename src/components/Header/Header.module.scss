@@ -16,8 +16,12 @@
     font-weight: 500;
 
     .name {
-      font-size: 1.5rem;
-      font-weight: 500;
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
     }
 
     .menu {
@@ -53,24 +57,42 @@
           font-weight: bold;
           color: inherit;
           text-decoration: none;
-        }
-
-        &:hover {
-          color: $secondary;
-          
-        }
-
-        .active{
-          color: $secondary;
-          border-bottom: 3px solid red;
-          padding-bottom: 3px;
-          
+          position: relative;
+      
+          &:hover {
+            color: $secondary;
+            padding-bottom: 2px;
+            transition: border-bottom-color 0.3s ease;
+          }
+      
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: rgb(119, 0, 255);
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+          }
+      
+          &:hover:before {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
         }
       }
+      
 
       .phone {
         gap: 1.2rem;
-        // flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        &:hover {
+          color: $secondary;
+        }
 
         svg {
           color: $secondary;

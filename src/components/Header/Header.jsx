@@ -26,7 +26,7 @@ const Header = () => {
       style={{ boxShadow: headerShadows }}
     >
       <div className={`flexCenter innerWidth ${css.container}`}>
-        <div className={css.name}>Shevabey</div>
+        <div className={css.name}><a href="#">Shevabey</a></div>
 
         <ul
         ref={menuRef}

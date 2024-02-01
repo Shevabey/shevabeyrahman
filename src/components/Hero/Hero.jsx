@@ -13,6 +13,7 @@ const Hero = () => {
       variants={staggerContainer}
       viewport={{ once: false, amount: 0.25 }}
       className= {`innerWidth ${css.container}`}>
+        <a className="anchor" id="home"></a>
         {/* Upper Elements */}
         <div className={css.upperElements}>
           <motion.span 

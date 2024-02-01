@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-scroll";
 import css from "./Header.module.scss";
 import { BiMenuAltRight, BiPhoneCall } from "react-icons/bi";
 import { motion } from "framer-motion";
@@ -7,15 +8,48 @@ import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
+  const [activeLink, setActiveLink] = useState("home"); 
+  const closeMenu = () => setMenuOpened(false);
   const headerShadows = useHeaderShadow();
   const menuRef = useRef();
 
-  useOutsideAlerter(
-    {
-      menuRef,
-      setMenuOpened
-    }
-  )
+  useOutsideAlerter({
+    menuRef,
+    setMenuOpened,
+  });
+
+  // when link click event sidebar close
+  const handleLinkClick = () => {
+    closeMenu();
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const expertiesElement = document.getElementById("experties");
+      const portfolioElement = document.getElementById("portfolio");
+  
+      if (
+        expertiesElement &&
+        window.scrollY >= expertiesElement.offsetTop &&
+        window.scrollY < portfolioElement.offsetTop
+      ) {
+        setActiveLink("experties");
+      } else if (portfolioElement && window.scrollY >= portfolioElement.offsetTop) {
+        setActiveLink("portfolio");
+      } else {
+        setActiveLink("home");
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
+
   return (
     <motion.div
       initial="hidden"
@@ -26,42 +60,77 @@ const Header = () => {
       style={{ boxShadow: headerShadows }}
     >
       <div className={`flexCenter innerWidth ${css.container}`}>
-        <div className={css.name}><a href="#">Shevabey</a></div>
+        <div className={css.name}>
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={100}
+            onClick={() => handleLinkClick("home")}
+          >
+            Shevabey Rahman
+          </Link>
+        </div>
 
         <ul
-        ref={menuRef}
+          ref={menuRef}
           style={getMenuStyles(menuOpened)}
           className={`flexCenter ${css.menu}`}
         >
-          <li>
-            <a href="#" className={css.active}>Home</a>
+          <li className={activeLink === "home" ? css.active : ""}>
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={100}
+              onClick={() => handleLinkClick("home")}
+            >
+              Home
+            </Link>
           </li>
-          <li>
-            <a href="#experties">Service</a>
+          <li className={activeLink === "experties" ? css.active : ""}>
+            <Link
+              to="experties"
+              spy={true}
+              smooth={true}
+              offset={1}
+              duration={100}
+              onClick={() => handleLinkClick("experties")}
+            >
+              Service
+            </Link>
           </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
+          <li className={activeLink === "portfolio" ? css.active : ""}>
+            <Link
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={3}
+              duration={100}
+              onClick={() => handleLinkClick("portfolio")}
+            >
+              Portfolio
+            </Link>
           </li>
-          <li className={`flexCenter ${css.phone}`}>
+          <li className={`flexCenter ${css.phone}`} onClick={handleLinkClick}>
             <p>081389608249</p>
             <BiPhoneCall size={"40px"} />
           </li>
           <div>
-              <a 
-              href="#"
-              className={css.button}
-              >My CV</a>
+            <a href="#" className={css.button}>
+              My CV
+            </a>
           </div>
         </ul>
         {/* For medium and small screen */}
-          <div
-            className={css.menuIcon}
-            onClick={() => setMenuOpened((prev) => !prev)}
-          >
-            <BiMenuAltRight size={30} />
-          </div>
-
-        
+        <div
+          className={css.menuIcon}
+          onClick={() => setMenuOpened((prev) => !prev)}
+        >
+          <BiMenuAltRight size={30} />
+        </div>
       </div>
     </motion.div>
   );

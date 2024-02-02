@@ -2,6 +2,7 @@ import React from "react";
 import css from "./Portfolio.module.scss";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "../../utils/motion";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 const Portfolio = () => {
   return (
@@ -25,9 +26,9 @@ const Portfolio = () => {
 
           <span className="secondaryText">Explore More Works</span>
         </div>
-        
+
         {/* Images */}
-        <div className={`flexCenter ${css.showCase}`}>
+        {/* <div className={`flexCenter ${css.showCase}`}>
           <motion.img
             variants={fadeIn("up", "tween", 0.5, 0.6)}
             src="./mockup/mockupstore.jpg"
@@ -38,6 +39,28 @@ const Portfolio = () => {
             src="./mockup/mockupwedding.jpg"
             alt="web wedding"
           />
+        </div> */}
+
+        <div className={`flexCenter ${css.portfolio}`}>
+          {/* card 1 */}
+          <div className={css.card}>
+            <img src="./mockup/mockupstore.jpg" className={css.cardImage} />
+
+            <div className={css.cardContent}>
+              <p className={css.cardTitle}>Barokah Online Shop</p>
+              <p className={css.cardDescription}>
+                Online shop sells gas cylinders, gallons, catfish and ice cubes.
+                Easy shopping with fast delivery, meeting daily home needs.
+              </p>
+              <div className={css.icons}>
+                <FaGithub size={"20px"}/>
+                <FaLink size={"20px"}/>
+              </div>
+            </div>
+          </div>
+
+          {/* card 2 */}
+          
         </div>
       </div>
     </motion.section>

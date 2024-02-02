@@ -1,42 +1,127 @@
 @import "../../styles/contants.scss";
 
-.wrapper{
-    background: white;
-    overflow: hidden;
-    
-    .container{
-        flex-direction: column;
-        gap: 2rem;
+.wrapper {
+  background: white;
+  overflow: hidden;
 
-        .heading{
+  .container {
+    flex-direction: column;
+    gap: 2rem;
+
+    .heading {
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+
+      > :nth-child(2) {
+        text-decoration: underline;
+        color: rgb(132, 0, 255);
+        cursor: pointer;
+      }
+    }
+
+    // .showCase{
+    //     width: 100%;
+    //     gap: 1.5rem;
+    //     justify-content: space-around;
+    //     flex-wrap: wrap;
+
+    //     >img{
+    //         @media (max-width: $sm){
+    //             width: 100%;
+    //         }
+    //         border-radius: 20px;
+    //         max-width: 25rem;
+    //         max-height: 18rem;
+    //         cursor: pointer;
+    //         box-shadow: 0 21px 13px rgba(0, 0, 0, 13%);
+    //     }
+    // }
+
+    .portfolio{
+        @media (max-width: $sm){
             width: 100%;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap;
+            flex-direction: column;
+}
+        display: flex;
+        gap: 4rem;
+        justify-content: space-around;
+        align-items: center;
 
-            >:nth-child(2){
-                text-decoration: underline;
-                color: rgb(132, 0, 255);
-                cursor: pointer;
+        .card {
+          position: relative;
+          width: 300px;
+          height: 200px;
+          background-color: #f2f2f2;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: 2rem;
+          overflow: hidden;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+          perspective: 1000px;
+          box-shadow: 0 21px 13px rgba(0, 0, 0, 13%);
+          transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          cursor: pointer;
+    
+          .cardImage {
+            @media (max-width: $sm){
+                            width: 300px;
             }
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            fill: #333;
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+            .cardContent {
+              transform: rotateX(0deg);
+            }
+            .cardImage {
+              opacity: 0;
+            }
+          }
+        }
+    
+        .cardContent {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          box-sizing: border-box;
+          background-color: #f2f2f2;
+          transform: rotateX(-90deg);
+          transform-origin: bottom;
+          transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .cardTitle {
+          margin: 0;
+          font-size: 24px;
+          color: #333;
+          font-weight: 700;
+        }
+        .cardDescription {
+          margin: 10px 0 0;
+          font-size: 14px;
+          color: #777;
+          line-height: 1.4;
         }
 
-        .showCase{
-            width: 100%;
-            gap: 1.5rem;
-            justify-content: space-around;
-            flex-wrap: wrap;
-
-            >img{
-                @media (max-width: $sm){
-                    width: 100%;
-                }
-                border-radius: 20px;
-                max-width: 25rem;
-                max-height: 18rem;
-                cursor: pointer;
-                box-shadow: 0 21px 13px rgba(0, 0, 0, 13%);
-            }
+        .icons{
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
         }
     }
+
+  }
 }

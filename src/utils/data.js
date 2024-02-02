@@ -4,7 +4,7 @@ import { BsReverseLayoutTextWindowReverse } from "react-icons/bs";
 
 export const projectExperience = [
   {
-    name: "Website Design",
+    name: "Website Development",
     stack: [
       "./logo/logohtml.png",
       "./logo/logocss.png",
@@ -14,14 +14,14 @@ export const projectExperience = [
     icon: HiOutlineDesktopComputer,
     bg: "#286F6C",
   },
+  // {
+  //   name: "Mobile App Design",
+  //   stack: ["./logo/logokotlin.png"],
+  //   icon: CiMobile1,
+  //   bg: "#EEC048",
+  // },
   {
-    name: "Mobile App Design",
-    stack: ["./logo/logokotlin.png"],
-    icon: CiMobile1,
-    bg: "#EEC048",
-  },
-  {
-    name: "UI/UX Design",
+    name: "Website Design",
     stack: ["./logo/logofigma.png"],
     icon: BsReverseLayoutTextWindowReverse,
     bg: "#F26440",

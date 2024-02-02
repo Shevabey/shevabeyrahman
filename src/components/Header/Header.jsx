@@ -48,6 +48,20 @@ const Header = () => {
     };
   }, []);
 
+  // Function clik number whastapp
+  const handleWhatsappClick = () => {
+    const number = "6288980824562";
+    const introductionMessage  = encodeURIComponent(
+      "Halo, saya tertarik dengan layanan Anda."
+    );
+
+    // URL whatsapp
+    const whatsappLink  = `https://wa.me/${number}?text=${introductionMessage}`;
+
+    // open link whatsapp
+      window.open(whatsappLink)
+  }
+
 
 
   return (
@@ -114,8 +128,8 @@ const Header = () => {
               Portfolio
             </Link>
           </li>
-          <li className={`flexCenter ${css.phone}`} onClick={handleLinkClick}>
-            <p>081389608249</p>
+          <li className={`flexCenter ${css.phone}`} onClick={handleWhatsappClick}>
+            <p>088980824562</p>
             <BiPhoneCall size={"40px"} />
           </li>
           <div>

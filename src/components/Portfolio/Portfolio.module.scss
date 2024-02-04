@@ -102,24 +102,77 @@
           transform: rotateX(-90deg);
           transform-origin: bottom;
           transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .cardTitle {
-          margin: 0;
-          font-size: 24px;
-          color: #333;
-          font-weight: 700;
-        }
-        .cardDescription {
-          margin: 10px 0 0;
-          font-size: 14px;
-          color: #777;
-          line-height: 1.4;
-        }
+          .cardTitle {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+            font-weight: 700;
+          }
+          .cardDescription {
+            margin: 10px 0 0;
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+          }
 
-        .icons{
+          .link{
+            height: 4rem;
             display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+
+            .tooltip {
+              position: relative;
+              display: inline-block;
+              cursor: pointer;
+              background-color: #282828;
+              color: #f1f1f1;
+              border-radius: 1em;
+              box-shadow: 0 15px 13px rgba(0, 0, 0, 13%);
+              transition: all ease-in 200ms;
+              &:hover{
+                scale: 1.2;
+              }
+              .tooltiptext {
+                visibility: hidden;
+                width: 100px;
+                background-color: #28282817;
+                color: #282828;
+                text-align: center;
+                font-size: small;
+                border-radius: 5px;
+                padding: 0.2rem;
+                position: absolute;
+                z-index: 1;
+                bottom: 125%;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 0.3s;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 100%;
+                  left: 50%;
+                  border-width: 8px;
+                  border-style: solid;
+                  border-color: #fe000017 transparent transparent transparent;
+                  transform: translateX(-50%);
+                }
+              }
+              &:hover {
+                .tooltiptext {
+                  visibility: visible;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+  
+          
         }
     }
 

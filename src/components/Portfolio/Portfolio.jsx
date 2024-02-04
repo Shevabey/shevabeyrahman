@@ -52,14 +52,40 @@ const Portfolio = () => {
                 Online shop sells gas cylinders, gallons, catfish and ice cubes.
                 Easy shopping with fast delivery, meeting daily home needs.
               </p>
-              <div className={css.icons}>
-                <FaGithub size={"20px"}/>
-                <FaLink size={"20px"}/>
+              <div className={css.link}>
+              <div className={css.tooltip}>
+                <FaLink size={"23px"}/>
+                <div className={css.tooltiptext}>Link Demo</div>
+              </div>
+              <div className={css.tooltip}>
+                <FaGithub size={"23px"}/>
+                <div className={css.tooltiptext}>Source code</div>
+              </div>
               </div>
             </div>
           </div>
 
           {/* card 2 */}
+          <div className={css.card}>
+            <img src="./mockup/mockupwedding.jpg" className={css.cardImage} />
+
+            <div className={css.cardContent}>
+              <p className={css.cardTitle}>Wedding Website</p>
+              <p className={css.cardDescription}>
+              Fulan & Fulanah`s simple, elegant, interactive wedding invitation. Reflecting the uniqueness of their marriage
+              </p>
+              <div className={css.link}>
+              <div className={css.tooltip}>
+                <FaLink size={"23px"}/>
+                <div className={css.tooltiptext}>Link Demo</div>
+              </div>
+              <div className={css.tooltip}>
+                <FaGithub size={"23px"}/>
+                <div className={css.tooltiptext}>Source code</div>
+              </div>
+              </div>
+            </div>
+          </div>
           
         </div>
       </div>

@@ -1,65 +1,179 @@
 @import "../../styles/contants.scss";
 
-.wrapper{
-    background: white;
-    
-    .container{
-        gap: 2rem;
+.wrapper {
+  background: white;
 
-        @media (max-width: $sm){
-            flex-direction: column;
-            gap: 2rem;
-            align-items: flex-start;
-        }
+  .container {
+    gap: 2rem;
 
-        .left{
-            flex: 3;
-
-            >*{
-                display: block;
-            }
-
-            >:nth-child(2){
-                margin-top: 3rem;
-
-                a{
-                    text-decoration: underline;
-                    color: rgb(132, 0, 255);
-                }
-            }
-        }
-
-        .right{
-            flex: 1;
-
-            .info{
-                margin-bottom: 1rem;
-
-                >*{
-                    display: block;
-                }
-            }
-
-            .menu{
-
-                @media (max-width: $sm){
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                }
-
-                display: flex;
-                flex-direction: column;
-                gap: 2rem;
-                list-style: none;
-
-                li{
-                    cursor: pointer;
-
-                    &:hover{
-                        color: $secondary
-                    }
-                }
-            }
-        }
+    @media (max-width: $sm) {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
     }
+
+    .left {
+      flex: 3;
+
+      > * {
+        display: block;
+      }
+
+      > :nth-child(2) {
+        margin-top: 3rem;
+
+        a {
+          text-decoration: underline;
+          color: rgb(132, 0, 255);
+        }
+      }
+
+      .sosmed {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        gap: 1.5rem;
+        .github {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          padding: 2px;
+          border-radius: 8px;
+          border: none;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          background-image: linear-gradient(to right, #2b2b2b, #000000);
+          color: #fff;
+          font-weight: bold;
+          cursor: pointer;
+          transition: transform 0.5s, border-radius 0.5s;
+
+          &:hover {
+            transform: translateY(12px) scale(1.1);
+            border-radius: 50%;
+            background-image: linear-gradient(to right, #331029, #310413);
+          }
+
+          svg {
+            width: 1.5rem;
+          }
+          .nameGithub {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.7s, transform 0.7s, color 0.7s, font-size 0.7s;
+
+            &:hover {
+              opacity: 1;
+              color: #707070;
+              font-size: 1rem; 
+              transform: translateY(-25px);
+            }
+          }
+        }
+        .linkedin {
+          display: flex;
+          justify-content: center;
+          padding: 2px;
+          border-radius: 0.357rem;
+          border: none;
+          box-shadow: 0px 0px 10px rgba(0, 78, 248, 0.5);
+          background-color: #0077b5;
+          color: white;
+          font-weight: 600;
+          transition: all 0.5s;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(12px) scale(1.1);
+            border-radius: 50%;
+          }
+
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+
+          .nameLinkedin {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.7s, color 0.7s, font-size 0.7s, transform 0.7s;
+
+            &:hover {
+              opacity: 1;
+              color: #4a5568; 
+              font-size: 0.875rem;
+              transform: translateY(-25px);
+            }
+          }
+        }
+        .instagram {
+          display: flex;
+          justify-content: center;
+          padding: 2px;
+          border-radius: 8px;
+          border: none;
+          box-shadow: 0px 0px 10px rgba(228, 76, 10, 0.5);
+          background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);;
+          color: white;
+          font-weight: bold;
+          transition: all 0.5s;
+
+          &:hover {
+            transform: translateY(12px) scale(1.1);
+            border-radius: 50%;
+            background-color: #331029;
+            color: white;
+            transition: all 0.5s;
+          }
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+          .nameInstagram {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.7s, color 0.7s, font-size 0.7s, transform 0.7s;
+
+            &:hover {
+              opacity: 1;
+              color: #4a5568; 
+              font-size: 0.875rem;
+              transform: translateY(-25px);
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+
+      .info {
+        margin-bottom: 1rem;
+
+        > * {
+          display: block;
+        }
+      }
+
+      .menu {
+        @media (max-width: $sm) {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        list-style: none;
+
+        li {
+          cursor: pointer;
+
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
 }

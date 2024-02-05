@@ -11,7 +11,7 @@ const links = {
 
     sosmed:{
         github: 'https://github.com/Shevabey?tab=repositories',
-        linkdin: 'https://www.linkedin.com/in/shevabey-rahman/',
+        linkedin: 'https://www.linkedin.com/in/shevabey-rahman/',
         instagram: 'https://www.instagram.com/shevabey_rhmn/',
     }
 }

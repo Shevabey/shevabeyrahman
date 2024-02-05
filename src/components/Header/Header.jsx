@@ -23,6 +23,8 @@ const Header = () => {
     closeMenu();
   };
 
+
+// click link for active link header when in section
   useEffect(() => {
     const handleScroll = () => {
       const expertiesElement = document.getElementById("experties");

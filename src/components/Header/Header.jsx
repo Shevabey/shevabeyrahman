@@ -10,7 +10,6 @@ import Toggle from "../Toggle/Toggle";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [activeLink, setActiveLink] = useState("home");
-  const [darkMode, setDarkMode] = useState(false);
   const closeMenu = () => setMenuOpened(false);
   const headerShadows = useHeaderShadow();
   const menuRef = useRef();

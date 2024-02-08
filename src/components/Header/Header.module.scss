@@ -54,19 +54,18 @@
       cursor: pointer;
 
       li {
-
         a {
           font-weight: bold;
           color: inherit;
           text-decoration: none;
           position: relative;
-      
+
           &:hover {
             color: $secondary;
             padding-bottom: 2px;
             transition: border-bottom-color 0.3s ease;
           }
-      
+
           &:before {
             content: "";
             position: absolute;
@@ -79,12 +78,11 @@
             transform: scaleX(0);
             transition: transform 0.3s ease;
           }
-      
+
           &:hover:before {
             transform-origin: left;
             transform: scaleX(1);
           }
-
         }
         &.active {
           border-bottom: 3px solid rgb(119, 0, 255);
@@ -93,7 +91,6 @@
           color: $secondary;
         }
       }
-      
 
       .phone {
         gap: 1.2rem;
@@ -173,5 +170,79 @@
         scale: 1;
       }
     }
+    
+    // @keyframes anima1 {
+    //   0% {
+    //     transform: translateX(1.5em);
+    //   }
+    //   80% {
+    //     transform: translateX(-0.3em);
+    //   }
+    //   100% {
+    //     transform: translateX(0em);
+    //   }
+    // }
+    // @keyframes anima {
+    //   0% {
+    //     transform: translateX(0px);
+    //   }
+    //   80% {
+    //     transform: translateX(1.6em);
+    //   }
+    //   100% {
+    //     transform: translateX(1.4em);
+    //   }
+    // }
+    // .switch {
+    //   font-size: 17px;
+    //   position: relative;
+    //   display: inline-block;
+    //   width: 3.5em;
+    //   height: 2em;
+    //   flex-wrap: wrap;
+    //   input {
+    //     opacity: 0;
+    //     width: 0;
+    //     height: 0;
+    //     &:checked {
+    //       + {
+    //         .slider {
+    //           &:before {
+    //             background-color: yellow;
+    //             box-shadow: none;
+    //             transform: translateX(1.5em);
+    //             animation: anima 0.3s linear;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // .slider {
+    //   position: absolute;
+    //   cursor: pointer;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   background-color: #223243;
+    //   transition: .4s;
+    //   border-radius: 30px;
+    //   &:before {
+    //     position: absolute;
+    //     content: "";
+    //     height: 1.4em;
+    //     width: 1.4em;
+    //     border-radius: 20px;
+    //     left: 0.3em;
+    //     bottom: 0.3em;
+    //     background-color: #223243;
+    //     box-shadow: inset 2px -2px 0 1.8px #fff;
+    //     transition: .4s;
+    //     animation: anima1 0.3s linear;
+    //   }
+    // }
+
+    
   }
 }

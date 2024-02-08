@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 import { getMenuStyles, headerVariants } from "../../utils/motion";
 import useHeaderShadow from "../../hooks/useHeaderShadow";
 import useOutsideAlerter from "../../hooks/useOutsideAlerter";
+import Toggle from "../Toggle/Toggle";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
-  const [activeLink, setActiveLink] = useState("home"); 
+  const [activeLink, setActiveLink] = useState("home");
+  const [darkMode, setDarkMode] = useState(false);
   const closeMenu = () => setMenuOpened(false);
   const headerShadows = useHeaderShadow();
   const menuRef = useRef();
@@ -23,28 +25,30 @@ const Header = () => {
     closeMenu();
   };
 
-
-// click link for active link header when in section
+  // click link for active link header when in section
   useEffect(() => {
     const handleScroll = () => {
       const expertiesElement = document.getElementById("experties");
       const portfolioElement = document.getElementById("portfolio");
-  
+
       if (
         expertiesElement &&
         window.scrollY >= expertiesElement.offsetTop &&
         window.scrollY < portfolioElement.offsetTop
       ) {
         setActiveLink("experties");
-      } else if (portfolioElement && window.scrollY >= portfolioElement.offsetTop) {
+      } else if (
+        portfolioElement &&
+        window.scrollY >= portfolioElement.offsetTop
+      ) {
         setActiveLink("portfolio");
       } else {
         setActiveLink("home");
       }
     };
-  
+
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -53,17 +57,16 @@ const Header = () => {
   // Function clik number whastapp
   const handleWhatsappClick = () => {
     const number = "6288980824562";
-    const introductionMessage  = encodeURIComponent(
+    const introductionMessage = encodeURIComponent(
       "Halo, saya tertarik dengan layanan Anda."
     );
 
     // URL whatsapp
-    const whatsappLink  = `https://wa.me/${number}?text=${introductionMessage}`;
+    const whatsappLink = `https://wa.me/${number}?text=${introductionMessage}`;
 
     // open link whatsapp
-      window.open(whatsappLink)
-  }
-
+    window.open(whatsappLink);
+  };
 
 
   return (
@@ -94,6 +97,7 @@ const Header = () => {
           style={getMenuStyles(menuOpened)}
           className={`flexCenter ${css.menu}`}
         >
+          {/* navigation */}
           <li className={activeLink === "home" ? css.active : ""}>
             <Link
               to="home"
@@ -130,16 +134,23 @@ const Header = () => {
               Portfolio
             </Link>
           </li>
-          <li className={`flexCenter ${css.phone}`} onClick={handleWhatsappClick}>
+          <li
+            className={`flexCenter ${css.phone}`}
+            onClick={handleWhatsappClick}
+          >
             <p>088980824562</p>
             <BiPhoneCall size={"40px"} />
           </li>
+          {/* btn my CV */}
           <div>
             <a href="#" className={css.button}>
               My CV
             </a>
           </div>
         </ul>
+        {/* toggle darkmode */}
+       <Toggle/>
+
         {/* For medium and small screen */}
         <div
           className={css.menuIcon}

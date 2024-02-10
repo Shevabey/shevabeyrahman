@@ -80,9 +80,9 @@
 
  <img width="939" alt="Cuplikan layar 2024-02-10 133452" src="https://github.com/Shevabey/shevabeyrahman/assets/120761224/13c8f61c-fbb4-4646-85cd-73c475e25358">
 
-Welcome to my web portfolio!
+Welcome to my website portfolio!
 
-This is a place where I share my works and my experiences in the world of web development. I am very excited to share with you the various projects I have worked on and the skills I have.
+This is a place where I share my work and experiences in the world of web development. I am very excited to share with you the various projects I have worked on and the skills I have.
 
 I am an enthusiastic web developer with a primary focus on responsive design and intuitive user experience.
 
@@ -90,10 +90,10 @@ I am an enthusiastic web developer with a primary focus on responsive design and
 Here, you'll find a variety of recent projects I've worked on, from simple web applications to more complex projects. Each project comes with a brief description, technologies used, and a direct link to the GitHub repository or online demo if available.
 
 
-I use a variety of technologies in building my projects, including HTML, CSS, JavaScript, and various frameworks such as React.js and Vue.js for the front-end. I also have experience in using development tools such as Git for version control.
+I use a variety of technologies in building my projects, including HTML, CSS, JavaScript, and various frameworks such as React.js and Scss for the front-end. I also have experience using development tools like Git for version control.
 
 
-If you are interested in collaborating or have questions about my projects, please feel free to contact me. I enjoy getting to know new people and discussing interesting collaboration opportunities.
+If you are interested in collaborating or have any questions about my projects, please feel free to contact me. I enjoy getting to know new people and discussing interesting collaboration opportunities.
 
 Thank you for visiting my web portfolio!
 

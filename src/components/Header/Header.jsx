@@ -147,9 +147,6 @@ const Header = () => {
             </a>
           </div>
         </ul>
-        {/* toggle darkmode */}
-       <Toggle/>
-
         {/* For medium and small screen */}
         <div
           className={css.menuIcon}

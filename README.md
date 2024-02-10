@@ -115,7 +115,7 @@ Thank you for visiting my web portfolio!
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
@@ -155,7 +155,7 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- CONTACT -->
 ## Contact
 
-Shevabey Rahman - [@Shevabey_rhmn](https://www.instagram.com/shevabey_rhmn/) - shevabey@gmail.com
+Shevabey Rahman - [@Shevabey_rhmn](https://www.instagram.com/shevabey_rhmn/) - shevabeyrahman@gmail.com
 
 My Project Link: [My Project](https://github.com/Shevabey?tab=repositories)
 

@@ -10,6 +10,8 @@ export const projectExperience = [
       "./logo/logocss.png",
       "./logo/logojs.png",
       "./logo/logoreact.png",
+      "./logo/logophp.png",
+      "./logo/logogit.png",
     ],
     icon: HiOutlineDesktopComputer,
     bg: "#286F6C",

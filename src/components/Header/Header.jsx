@@ -142,7 +142,7 @@ const Header = () => {
           </li>
           {/* btn my CV */}
           <div>
-            <a href="#" className={css.button}>
+            <a href="./CV/CV Shevabey.pdf" download className={css.button}>
               My CV
             </a>
           </div>

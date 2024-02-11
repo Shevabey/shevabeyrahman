@@ -9,6 +9,10 @@
 
     .upperElements {
       @media (max-width: $sm), (max-width: $md) {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: left;
+        font-size: small;
       }
       display: flex;
       align-items: center;
@@ -20,7 +24,7 @@
       @media (max-width: $sm), (max-width: $md) {
         margin-top: 4rem;
         display: flex;
-        // gap: 50px;
+        gap: 20px;
         justify-content: center;
         font-size: small;
       }
@@ -35,7 +39,6 @@
           display: flex;
           flex-direction: column;
           text-align: center;
-          // gap: 50px;
           justify-content: center;
           font-size: small;
         }
@@ -86,16 +89,15 @@
       position: absolute;
       bottom: -2rem;
       margin: auto;
-      background: url("./splashline.png") center center no-repeat;
-      background-size: 33rem;
-      left: 40%;
+      left: 28%;
+      flex-wrap: wrap;
 
       img {
-        @media (max-width: $sm) {
-          width: 14rem;
+        @media (max-width: $sm), (max-width: $md) {
+          width: 30rem;
         }
         margin-bottom: -5px;
-        width: 20rem;
+        width: 40rem;
         filter: drop-shadow(4px 0 4px black);
       }
     }

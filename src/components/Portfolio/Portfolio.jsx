@@ -38,20 +38,6 @@ const Portfolio = () => {
           </a>
         </motion.div>
 
-        {/* Images */}
-        {/* <div className={`flexCenter ${css.showCase}`}>
-          <motion.img
-            variants={fadeIn("up", "tween", 0.5, 0.6)}
-            src="./mockup/mockupstore.jpg"
-            alt="web store"
-          />
-          <motion.img
-            variants={fadeIn("up", "tween", 0.7, 0.6)}
-            src="./mockup/mockupwedding.jpg"
-            alt="web wedding"
-          />
-        </div> */}
-
         <div className={`flexCenter ${css.portfolio}`}>
           {/* card 1 */}
           <motion.div

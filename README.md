@@ -27,7 +27,7 @@
 <div align="center">
   <a href="https://shevabeyrahman.vercel.app/">
 
-  ![Webinar Online Education Vector Hd PNG Images, Webinar Forum Online Seminar Website Line Icon  Vector Isola, Website Icons, Line Icons, Online Icons PNG Image For Free Download](https://github.com/Shevabey/shevabeyrahman/assets/120761224/9fd4ff27-b9b8-48de-a573-ddd8abcd585b)
+  <img width="939" alt="Cuplikan layar 2024-02-10 133452" src="https://github.com/Shevabey/shevabeyrahman/assets/120761224/13c8f61c-fbb4-4646-85cd-73c475e25358">
 
     
   </a>
@@ -77,8 +77,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
- <img width="939" alt="Cuplikan layar 2024-02-10 133452" src="https://github.com/Shevabey/shevabeyrahman/assets/120761224/13c8f61c-fbb4-4646-85cd-73c475e25358">
 
 Welcome to my website portfolio!
 
